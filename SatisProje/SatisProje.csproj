@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90264F8F-FA12-48A5-B15A-19808830C829}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SatisProje</RootNamespace>
+    <AssemblyName>SatisProje</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Birimalttipi.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Birimtipi.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CokSatanlar.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Iliskiler.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kategori.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Muhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Muhasebe.Designer.cs">
+      <DependentUpon>Muhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri.Designer.cs">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odemeler.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parametreler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametreler.Designer.cs">
+      <DependentUpon>Parametreler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SatisProjeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisProjeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatisProjeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatisProjeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisProjeModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Siparisler.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tedarikci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tedarikci.Designer.cs">
+      <DependentUpon>Tedarikci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urun.Designer.cs">
+      <DependentUpon>Urun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunal.Designer.cs">
+      <DependentUpon>Urunal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler.cs">
+      <DependentUpon>SatisProjeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties.cs" />
+    <Compile Include="Urunsat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunsat.Designer.cs">
+      <DependentUpon>Urunsat.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Muhasebe.resx">
+      <DependentUpon>Muhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri.resx">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametreler.resx">
+      <DependentUpon>Parametreler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tedarikci.resx">
+      <DependentUpon>Tedarikci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urun.resx">
+      <DependentUpon>Urun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunal.resx">
+      <DependentUpon>Urunal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunsat.resx">
+      <DependentUpon>Urunsat.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="SatisProjeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SatisProjeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SatisProjeModel.edmx.diagram">
+      <DependentUpon>SatisProjeModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SatisProjeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SatisProjeModel.Context.cs</LastGenOutput>
+      <DependentUpon>SatisProjeModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="SatisProjeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SatisProjeModel.edmx</DependentUpon>
+      <LastGenOutput>SatisProjeModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
